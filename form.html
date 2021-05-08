@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Form1</title>
+        <script>
+            function confirm()
+            {
+                var empt1 = document.getElementById("a").value
+                var empt2 = document.getElementById("b").value
+                var empt3 = document.getElementById("e").value
+                var empt4 = document.getElementById("f").value
+                var empt5 = document.getElementById("g").value
+                if(empt1 == "" || empt2 == ""|| empt3 == "" || empt4 == ""|| empt5 == "")
+                {
+                    alert("Please fill out the mandatory fields")
+                    return false
+                }
+            }
+            function myfunc()
+            {
+                   var p = document.getElementById("f")//.value()
+                   if(p.type==="password")
+                   {
+                       p.type="text"
+                   } 
+                   else{
+                       p.type="password"
+                   }
+            }
+            function passmatch()
+            {
+                var p1 =document.getElementById("f").value
+                var p2 =document.getElementById("g").value
+
+                if(p1 != p2)
+                {
+                    alert("Password do not match")
+
+                }
+            }
+               
+                
+        </script>
+    </head>
+    <body>
+        <form name="myForm" action="/action_page.php" onsubmit="return confirm()" method="post" required >
+        First Name* :<input type="text" id="a" name="fname" value=""><br><br>
+        Second Name* :<input type="text" id="b" name="lname"><br><br>
+        Phone Number :<input type="number" id="c" name="number"><br><br>
+        Address :<textarea rows="5" cols="50" id="d"></textarea><br><br>
+        Email* :<input type="text" id="e" name="address"><br><br>
+        Password* :<input type="password" id="f" name="password" ><br>
+        <input type="checkbox" onclick="myfunc()">Show Password<br>
+        Retype Password* :<input type="password" id="g" name="conpassword"><br><br>
+        Gender : <input type="radio" id="h" name="gender"> Male 
+        <input type="radio" id="i" name="gender">female 
+        <input type="radio" id="j" name="gender">others <br><br>
+        Interest
+        <select name="Interest" id="k">
+            <option name="Skydiving">Skydiving</option>
+            <option name="WaterGliding">WaterGliding</option>
+            <option name="Mountain Climbing">Mountain Climbing</option>
+            <option name="Seadiving">Seadiving</option>
+        </select><br><br>
+        <input type="submit" id="l" value="Submit" onclick="passmatch()"><br><br>
+        Mandatory Fields *
+        
+        </form>
+    </body>
+    
+</html>

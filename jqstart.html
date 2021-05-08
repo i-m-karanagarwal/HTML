@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Hy their</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h2 align="Center">Calculator</h2>
+    <input type="number" id="n1" value="" />
+    <input type="number" id="n2" value="" />
+    <p>
+      <button type="button" id="plus" onclick="calc(plus)">+</button>
+      <button type="button" id="minus" onclick="calc(minus)">-</button>
+      <button type="button" id="mul" onclick="calc(mul)">x</button>
+      <button type="button" id="div" onclick="calc(div)">÷</button>
+    </p>
+    <input type="number" id="n3" value="result" />
+    <input type="button" value="AC" onclick="clr()" />
+  </body>
+  <script>
+    function calc(func) {
+      //var n1 = $("#n1").val
+      //var n2 = $("#n2").val
+      a = parseInt($("#n1").val());
+      b = parseInt($("#n2").val());
+      console.log("Hello");
+      var result;
+      switch (func) {
+        case plus:
+          result = a + b;
+          break;
+        case minus:
+          result = a - b;
+          break;
+        case mul:
+          result = a * b;
+          break;
+        case div:
+          result = a / b;
+          break;
+      }
+      $("#n3").val(result)
+      //document.getElementById("n3").value = result;
+    }
+    function clr() {
+        $("#n1").val("")
+        $("#n2").val("")
+        $("#n3").val("")
+      //document.getElementById("n1").value = "";
+      //document.getElementById("n2").value = "";
+      //document.getElementById("n3").value = "";
+    }
+  </script>
+</html>

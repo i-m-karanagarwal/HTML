@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Offers!!!</title>
+    </head>
+    <body>
+        <p id="a"></p>
+        <input type="button" id="btn" value="Click" onclick="next()">
+        
+    </body>
+    <script>
+       var count=0
+        function next()
+        {
+            count++
+            console.log("hello")
+            if(count==2)
+            {
+                console.log("hy")
+                document.getElementById("a").innerHTML="Welcome to India"  
+                document.body.style.backgroundColor="red"         
+            }
+            if(count==4)
+            {
+                console.log("hy2")
+                document.getElementById("a").innerHTML="Atithi Devo Bhav"  
+                document.body.style.backgroundColor="blue"         
+            }
+            if(count==6)
+            {
+                console.log("hy3")
+                document.getElementById("a").innerHTML="Have a safe Journey"  
+                document.body.style.backgroundColor="green"  
+                      
+            } 
+            if(count==8)
+            {
+                count=0 
+                console.log("hy4")
+                document.getElementById("a").innerHTML=""  
+                document.body.style.backgroundColor=""         
+            }
+        }  
+    </script>
+</html>

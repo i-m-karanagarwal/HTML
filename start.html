@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Hy their</title>
+  </head>
+  <body>
+    <h2 align="Center">Calculator</h2>
+    <input type="number" id="n1" value="" />
+    <input type="number" id="n2" value="" />
+    <p>
+      <button type="button" id="plus" onclick="calc(plus)">+</button>
+      <button type="button" id="minus" onclick="calc(minus)">-</button>
+      <button type="button" id="mul" onclick="calc(mul)">x</button>
+      <button type="button" id="div" onclick="calc(div)">÷</button>
+    </p>
+    <input type="number" id="n3" value="result" />
+    <input type="button" value="AC" onclick="clr()" />
+  </body>
+  <script>
+    function calc(func) {
+      var n1 = document.getElementById("n1").value;
+      var n2 = document.getElementById("n2").value;
+      a = parseInt(n1);
+      b = parseInt(n2);
+      //console.log(print("Hello"));
+      var result;
+      switch (func) {
+        case plus:
+          result = a + b;
+          break;
+        case minus:
+          result = a - b;
+          break;
+        case mul:
+          result = a * b;
+          break;
+        case div:
+          result = a / b;
+          break;
+      }
+      document.getElementById("n3").value = result;
+    }
+    function clr() {
+      document.getElementById("n1").value = "";
+      document.getElementById("n2").value = "";
+      document.getElementById("n3").value = "";
+    }
+  </script>
+</html>

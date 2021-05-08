@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 18%;
+  flex-direction: row;
+  height: 600px;
+  flex-wrap: wrap;
+  background-image: url("scarlet.jpg");
+  background-size: 415px, 80px;
+  background-repeat: no-repeat;
+}
+
+.flex-item-right {
+  background-color: grey;
+  padding: 10px;
+  flex: 5%;
+}
+
+.flex-item-center {
+    background-color: grey;
+    padding-top: 250px;
+    flex: 45%;
+    
+}
+#text1{
+    height: 35px;
+    position: absolute;
+    top: 45%;
+    width: 258px;
+    border: grey;
+    border-radius: 7px;
+}
+#text2{
+    height: 35px;
+    position: absolute;
+    top: 56%;
+    width: 258px;
+    border: grey;
+    border-radius: 7px;
+
+}
+#text3{
+    height: 35px;
+    position: absolute;
+    top: 68%;
+    width: 258px;
+    border: grey;
+    border-radius: 7px;
+}
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="flex-item-left"></div>
+  <div class="flex-item-right"></div>
+  <div class="flex-item-center">
+      <label for="register"> Welcome to MCU!!!</label><br>
+    <input type="text" id="text1" class="form-control"><br>
+    <p>Hail HYDRA!!! Enter your password🤐</p><br>
+    <input type="password" id="text2" class="form-control">
+    <p>Repeat Your password!!</p><br>
+    <input type="password" id="text3" class="form-control"><br>
+
+    <button type="button" class="btn btn-danger">Launch...</button>
+  </div>
+</div>
+
+</body>
+</html>

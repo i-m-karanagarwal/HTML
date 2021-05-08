@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Select option</title>
+    </head>
+    <body>
+        <input type="text" id="a" >
+        <select id="b">
+           
+        </select><br><br>
+        <button id="d">Click to add</button>
+    </body>
+    <script>
+        d.onclick=function(){
+            var x=document.getElementById("b")
+            var option=document.createElement("option")
+            option.text=document.getElementById("a").value
+            x.appendChild(option)
+        }
+    </script>
+</html>

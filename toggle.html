@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Toggle switch
+        </title>
+    </head>
+
+    <body.style.color="red">
+        <div id="t1">
+            <p>
+                hy
+            </p>
+
+        </div>
+        <button onclick="chng(1)">ON</button>
+        <button onclick="chng(2)">OFF</button>
+    </body>
+    <script>
+
+        function chng(a)
+        {
+            var tog=document.getElementById("t1")
+            switch(a){
+                case 1:
+                tog.style.color="red"
+                document.body.style.backgroundColor="blue"
+                break;
+                case 2:
+                tog.style.color="blue"
+                document.body.style.backgroundColor="red"
+                break;  
+
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Click It</title>
+    </head>
+    <body>
+        <label>Name: </label><input type="text" id="n1" ><br><br>
+        <label>Contact: </label><input type="string" id="n2" value=""><br><br>
+        <label>Year of Service: </label><input type="string" id="n3" value=""><br><br>
+        <label>Salary: </label><input type="string" id="n4" value=""><br><br>
+        <button type="button" id="First" > First</button>
+        <button type="button" id="Last" > Last</button>
+        <button type="button" id="Next" >Next</button>
+        <button type="button" id="Previous" > Previous</button>
+        <p id="demo"></p>
+
+    </body>
+    <script>
+        var name1=['Ramesh', "Suresh", "Mukesh", "Rakesh"]
+        var contact=["9897898765", "8765445678", "9898976543", "9878976545"]
+        var yos=["12", "24", "10", "9"]
+        var Salary=["79000", "100000000", "69000", "49000"]
+        var count=1
+
+        First.onclick=function(){
+            
+            document.getElementById("n1").value=name1[0]
+            document.getElementById("n2").value=contact[0]
+            document.getElementById("n3").value=yos[0]
+            document.getElementById("n4").value=Salary[0]
+            
+
+            //console.log(name[1])
+        }
+        Last.onclick=function(){
+            document.getElementById("n1").value=name1[name1.length-1]
+            document.getElementById("n2").value=contact[contact.length-1]
+            document.getElementById("n3").value=yos[yos.length-1]
+            document.getElementById("n4").value=Salary[Salary.length-1]
+            document.getElementById("demo").innerHTML="This is last record"
+            
+        }
+        Next.onclick=function(){
+            document.getElementById("n1").value=name1[count]
+            document.getElementById("n2").value=contact[count]
+            document.getElementById("n3").value=yos[count]
+            document.getElementById("n4").value=Salary[count]
+            count++
+            if(count>name1.length-1){
+                document.getElementById("demo").innerHTML="This is last record"
+                count=name1.length-1;
+                document.getElementById("n1").value=name1[name1.length-1]
+            document.getElementById("n2").value=contact[contact.length-1]
+            document.getElementById("n3").value=yos[yos.length-1]
+            document.getElementById("n4").value=Salary[Salary.length-1]
+            document.getElementById("demo").innerHTML="This is last record"
+                return false  
+            }
+        }
+        Previous.onclick=function(){
+            //count--
+            document.getElementById("n1").value=name1[count]
+            document.getElementById("n2").value=contact[count]
+            document.getElementById("n3").value=yos[count]
+            document.getElementById("n4").value=Salary[count]
+            count--
+            console.log(count)
+            if(count<0){
+                document.getElementById("demo").innerHTML="This is last record"
+                count=0;
+                document.getElementById("n1").value=name1[0]
+            document.getElementById("n2").value=contact[0]
+            document.getElementById("n3").value=yos[0]
+            document.getElementById("n4").value=Salary[0]
+            document.getElementById("demo").innerHTML="This is last record"
+                return false  
+            }
+        }
+    </script>
+</html>
